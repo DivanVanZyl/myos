@@ -16,7 +16,6 @@ default for $PATH is:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/us
 Make sure the below packages are installed (Debian).
 
 build-essential
-build-essential
 bison
 flex
 libgmp3-dev
