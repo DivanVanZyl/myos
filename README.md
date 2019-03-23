@@ -25,12 +25,13 @@ texinfo
 libcloog-isl-dev
 libisl-dev
 
-Download the source code for Binutils and GCC.
+Download the source code for Binutils 2.24 and GCC ?.?.?. Make a folder named "src" and place both in there. 
 
 https://ftp.gnu.org/gnu/binutils/
 https://ftp.gnu.org/gnu/gcc/
 
 ****cross compiler****
+
 
 1. Env variables
 
@@ -43,9 +44,9 @@ export PATH="$PREFIX/bin:$PATH"
 cd $HOME/src
 mkdir build-binutils
 cd build-binutils
-../binutils-2.31/configure --target=$TARGET --prefix="$PREFIX" --with-sysroot --disable-nls --disable-werror
-make
-make install
+../binutils-x.xx/configure --target=$TARGET --prefix="$PREFIX" --with-sysroot --disable-nls
+make --ignore-errors
+sudo make install --ignore-errors
 
 3. Make gcc
 
@@ -53,7 +54,7 @@ cd $HOME/src
  
 mkdir build-gcc
 cd build-gcc
-../gcc-7.3.0/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers
+../gcc-x.x.x/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers
 make all-gcc
 make all-target-libgcc
 make install-gcc
