@@ -17,5 +17,5 @@ void kernel_main(void) {
 	Implement file system.
 	*/
 
-	printfWithBorder("Anja hou baie van mooi borders  (:");
+	printfWithBorder("Hello World.");
 }
